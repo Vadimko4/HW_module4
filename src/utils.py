@@ -27,11 +27,11 @@ def create_objects_from_dicts_list(data_list) -> list[Category]:
     return categories_list
 
 
-if __name__ == "__main__":
-    dicts = read_categories_dict_from_json('../data/products.json')
-    categories = create_objects_from_dicts_list(dicts)
-    print(categories)
-    print(categories[0].name)
-    print(categories[0].products)
-    print(categories[0].categories_quantity)
-    print(categories[0].products_quantity)
+# if __name__ == "__main__":
+#     dicts = read_categories_dict_from_json('../data/products.json')
+#     categories = create_objects_from_dicts_list(dicts)
+#     print(categories)
+#     print(categories[0].name)
+#     print(categories[0].products)
+#     print(categories[0].categories_quantity)
+#     print(categories[0].products_quantity)
