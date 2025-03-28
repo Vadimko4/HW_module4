@@ -5,11 +5,11 @@ from src.product import Product
 
 
 @pytest.fixture()
-def test_category():
+def test_category(first_test_product, second_test_product):
     return Category(
-        name = "Смартфоны",
+        name="Смартфоны",
         description="Смартфоны, средство коммуникации и получение дополнительных функций для удобства жизни",
-        products=[]
+        products=[first_test_product, second_test_product]
     )
 
 
