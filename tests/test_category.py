@@ -1,5 +1,3 @@
-from src.category import Category
-
 
 def test_category_init(test_category, first_test_product, second_test_product):
     assert test_category.name == "Смартфоны"
