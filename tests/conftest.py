@@ -31,3 +31,13 @@ def second_test_product():
         price=210000.0,
         quantity=8
     )
+
+
+@pytest.fixture()
+def third_test_product():
+    return Product(
+        name="Xiaomi Redmi Note 11",
+        description="1024GB, Синий",
+        price=31000.0,
+        quantity=14
+    )

@@ -1,3 +1,6 @@
+from src.product import Product
+from src.category import Category
+
 if __name__ == "__main__":
     product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
     product2 = Product("Iphone 15", "512GB, Gray space", 210000.0, 8)
@@ -21,7 +24,7 @@ if __name__ == "__main__":
     print(new_product.name)
     print(new_product.description)
     print(new_product.price)
-    print(new_product.quantity)
+    print(new_product.quantity, product1.quantity)
 
     new_product.price = 800
     print(new_product.price)
@@ -30,3 +33,5 @@ if __name__ == "__main__":
     print(new_product.price)
     new_product.price = 0
     print(new_product.price)
+
+    print(f'количество существующих продуктов: {len(Product.products_list)}')
