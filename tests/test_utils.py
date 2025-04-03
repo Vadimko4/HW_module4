@@ -26,5 +26,5 @@ def test_create_objects_from_dicts_list(test_category, first_test_product, secon
     assert len(test_objects_list) == 1
     assert test_objects_list[0].name == test_category.name
     assert test_objects_list[0].description == test_category.description
-    assert test_objects_list[0].products_quantity == test_category.products_quantity
+    assert test_objects_list[0].product_count == test_category.product_count
     assert test_objects_list[0].categories_quantity == test_category.categories_quantity

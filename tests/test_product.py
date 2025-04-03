@@ -9,3 +9,14 @@ def test_product_init(first_test_product, second_test_product):
     assert second_test_product.description == "512GB, Gray space"
     assert second_test_product.price == 210000.0
     assert second_test_product.quantity == 8
+
+
+def test_product_price_property(first_test_product, second_test_product):
+    assert first_test_product.price == 180000.0
+    assert second_test_product.price == 210000.0
+
+
+def test_product_price_setter(first_test_product):
+    assert first_test_product.price == 180000.0
+    first_test_product.price = 185000.0
+    assert first_test_product.price == 185000.0
