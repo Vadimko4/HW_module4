@@ -15,7 +15,7 @@ class Category:
         self.__products = products
 
         Category.categories_quantity += 1
-        Category.product_count += len(products)
+        Category.product_count += sum(product.quantity for product in products)
 
     def __str__(self):
         return f"{self.name}, количество продуктов: {self.product_count} шт."
