@@ -16,6 +16,10 @@ def test_product_str(first_test_product, second_test_product):
     assert str(second_test_product) == "Iphone 15, 210000.0 руб. Остаток: 8 шт."
 
 
+def test_product_add(first_test_product, second_test_product):
+    assert first_test_product + second_test_product == 2580000.0
+
+
 def test_product_price_property(first_test_product, second_test_product):
     assert first_test_product.price == 180000.0
     assert second_test_product.price == 210000.0

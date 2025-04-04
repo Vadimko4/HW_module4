@@ -8,6 +8,10 @@ def test_category_init(test_category, first_test_product, second_test_product):
     assert test_category.product_count == 13
 
 
+def test_category_str(test_category):
+    assert str(test_category) == "Смартфоны, количество продуктов: 26 шт."
+
+
 def test_category_products_property(test_category):
     assert test_category.products == ('Samsung Galaxy C23 Ultra, 180000.0 руб. Остаток: 5 шт.\n'
                                       'Iphone 15, 210000.0 руб. Остаток: 8 шт.\n')
