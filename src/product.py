@@ -67,7 +67,7 @@ class Smartphone(Product):
 
     def __add__(self, other):
         if other.__class__ == self.__class__:
-            return self.__price * self.quantity + other.__price * other.quantity
+            return self.price * self.quantity + other.price * other.quantity
         else:
             raise TypeError
 
