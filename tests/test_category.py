@@ -5,7 +5,11 @@ def test_category_init(test_category, first_test_product, second_test_product):
     assert test_category.get_products == [first_test_product, second_test_product]
 
     assert test_category.categories_quantity == 1
-    assert test_category.product_count == 2
+    assert test_category.product_count == 13
+
+
+def test_category_str(test_category):
+    assert str(test_category) == "Смартфоны, количество продуктов: 26 шт."
 
 
 def test_category_products_property(test_category):
