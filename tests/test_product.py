@@ -60,3 +60,12 @@ def test_smartphone_add(test_first_smartphone, test_second_smartphone):
 def test_smartphone_wrong_add(test_first_smartphone, test_first_lawngrass):
     with pytest.raises(TypeError):
         print(test_first_smartphone + test_first_lawngrass)
+
+
+def test_lawngrass_add(test_first_lawngrass, test_second_lawngrass):
+    assert (test_first_lawngrass + test_second_lawngrass) == 16750.0
+
+
+def test_lawngrass_wrong_add(test_first_lawngrass, test_first_smartphone):
+    with pytest.raises(TypeError):
+        print(test_first_lawngrass + test_first_smartphone)
