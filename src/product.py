@@ -1,7 +1,8 @@
 from src.baseproduct import BaseProduct
+from src.print_mixin import PrintMixin
 
 
-class Product(BaseProduct):
+class Product(BaseProduct, PrintMixin):
     name: str
     description: str
     __price: float
@@ -14,6 +15,7 @@ class Product(BaseProduct):
         self.description = description
         self.__price = price
         self.quantity = quantity
+        super().__init__(name, description, price, quantity)
         Product.products_list.append(self)
 
     def __str__(self):
