@@ -1,3 +1,6 @@
+import pytest
+
+
 def test_category_init(test_category, first_test_product, second_test_product):
     assert test_category.name == "Смартфоны"
     assert test_category.description == \
@@ -20,3 +23,8 @@ def test_category_products_property(test_category):
 def test_category_add_product(test_category, first_test_product, second_test_product, third_test_product):
     test_category.add_product(third_test_product)
     assert test_category.get_products == [first_test_product, second_test_product, third_test_product]
+
+
+def test_category_add_not_product(test_category):
+    with pytest.raises(TypeError):
+        test_category.add_product("не продукт")
