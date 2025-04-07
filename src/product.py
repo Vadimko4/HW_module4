@@ -66,7 +66,7 @@ class Smartphone(Product):
         self.color = color
 
     def __add__(self, other):
-        if other.__class__ == self.__class__:
+        if type(other) == type(self):
             return self.price * self.quantity + other.price * other.quantity
         else:
             raise TypeError
@@ -81,7 +81,7 @@ class LawnGrass(Product):
         self.color = color
 
     def __add__(self, other):
-        if other.__class__ == self.__class__:
+        if type(other) == type(self):
             return self.price * self.quantity + other.price * other.quantity
         else:
             raise TypeError
