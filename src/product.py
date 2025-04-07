@@ -2,7 +2,7 @@ from src.baseproduct import BaseProduct
 from src.print_mixin import PrintMixin
 
 
-class Product(BaseProduct, PrintMixin):
+class Product(PrintMixin, BaseProduct):
     name: str
     description: str
     __price: float
@@ -15,7 +15,7 @@ class Product(BaseProduct, PrintMixin):
         self.description = description
         self.__price = price
         self.quantity = quantity
-        super().__init__(name, description, price, quantity)
+        super().__init__()
         Product.products_list.append(self)
 
     def __str__(self):
@@ -89,3 +89,14 @@ class LawnGrass(Product):
             return self.price * self.quantity + other.price * other.quantity
         else:
             raise TypeError
+
+
+if __name__ == '__main__':
+    print(Product.__mro__)
+    product1 = Product("Iphone 15", "512GB, Gray space", 210000.0, 8)
+
+    phone = Smartphone("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера",
+               180000.0, 5, 95.5, "S23 Ultra", 256, "Серый")
+
+    grass = LawnGrass("Газонная трава", "Элитная трава для газона", 500.0,
+                     20, "Россия", "7 дней", "Зеленый")
