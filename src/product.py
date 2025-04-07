@@ -1,5 +1,7 @@
+from src.baseproduct import BaseProduct
 
-class Product:
+
+class Product(BaseProduct):
     name: str
     description: str
     __price: float
