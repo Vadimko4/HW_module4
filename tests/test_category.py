@@ -1,5 +1,7 @@
 import pytest
 
+from src.category import Category
+
 
 def test_category_init(test_category, first_test_product, second_test_product):
     assert test_category.name == "Смартфоны"
@@ -28,3 +30,12 @@ def test_category_add_product(test_category, first_test_product, second_test_pro
 def test_category_add_not_product(test_category):
     with pytest.raises(TypeError):
         test_category.add_product("не продукт")
+
+
+def test_category_get_avg_product_price(test_category):
+    assert test_category.get_avg_product_price() == 195000.0
+
+
+def test_category_get_avg_product_price_empty():
+    empty_category = Category("empty_category", "it's empty", [])
+    assert empty_category.get_avg_product_price() == 0
