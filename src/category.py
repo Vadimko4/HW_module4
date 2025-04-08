@@ -39,3 +39,12 @@ class Category:
     @property
     def get_products(self):
         return self.__products
+
+    def get_avg_product_price(self):
+        try:
+            if not len(self.__products):
+                raise ValueError("В категории нет ни одного товара")
+        except ValueError:
+            return 0
+        else:
+            return round(sum(product.price for product in self.__products) / len(self.__products), 2)
