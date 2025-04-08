@@ -12,6 +12,11 @@ def test_product_init(first_test_product, second_test_product):
     assert second_test_product.price == 210000.0
     assert second_test_product.quantity == 8
 
+    assert second_test_product.name == "Iphone 15"
+    assert second_test_product.description == "512GB, Gray space"
+    assert second_test_product.price == 210000.0
+    assert second_test_product.quantity == 8
+
 
 def test_product_str(first_test_product, second_test_product):
     assert str(first_test_product) == "Samsung Galaxy C23 Ultra, 180000.0 руб. Остаток: 5 шт."
